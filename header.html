@@ -1,0 +1,106 @@
+
+
+<table>
+    <tr>
+        <td>
+            <button class="loginbtn"> <span id="button_text_style"> Login </span> </button>
+        </td>
+
+        <td>
+            <button id="hidden" class="logoutbtn"> <span id="button_text_style"> Logout </span> </button>
+        </td>
+
+        <td>
+            <button class="registerbtn"> <span id="button_text_style"> Register </span> </button>
+        </td>
+
+        <td>
+            <button id="hidden" class="user_name"> <span id="button_text_style" class="add_name"> </span> </button>
+        </td>
+
+        <td>
+            <button class="games_list_btn"> <span id="button_text_style"> Games </span> </button>
+        </td>
+
+        <td>
+            <button class="forum_btn"> <span id="button_text_style"> Forum </span> </button>
+        </td>
+
+        <td>
+            <form action="" method="get">
+                <input id="src" type="text" value="Search">    
+            </form>
+        </td>
+    </tr>
+</table>
+
+<div class="login_popup">
+    <div class="login_page">
+        <button class="close"> X </button>
+
+        <form id="login_form" action="php/login.php" method="post">
+            <br>
+            <p id="hidden" class="err_msg" style="margin-top: 5%;"> </p>
+
+            <br>
+            <p style="margin-top: 5%;"> User ID </p>
+
+            <input type="text" placeholder="ID" name="id" style="margin-bottom: 5%;">
+
+            <br>
+            <p> User Password </p>
+
+            <input type="password" placeholder="Password" name="password" style="margin-bottom: 10%;">
+
+            <br>
+            <input id="lgn" class="ignore focused" type="submit" value="Login" style="margin-bottom: 20%;">
+
+            <br>
+            <p style="margin-bottom: 5%;"> If you have not registered yet, do it now! </p>
+
+            <button id="rgst" class="ignore" style="margin-bottom: 20%;"> Register </button>
+        </form>
+    </div>
+
+    <div class="register_page" id="hidden">
+        <button class="close"> X </button>
+
+        <form id="register_form" action="php/register.php" method="post">
+            <br>
+            <p id="hidden" class="err_msg" style="margin-top: 5%;"> </p>
+
+            <br>
+            <p style="margin-top: 5%;"> Name </p>
+
+            <input type="text" placeholder="Name" name="name" style="margin-bottom: 5%;">
+
+            <br>
+            <p> User ID </p>
+
+            <input type="text" placeholder="ID" name="id" style="margin-bottom: 5%;">
+
+            <br>
+            <p> Password </p>
+
+            <input type="password" placeholder="Password" name="password" style="margin-bottom: 5%;">
+
+            <br>
+            <p> Retype Password </p>
+
+            <input type="password" placeholder="Password" name="repassword" style="margin-bottom: 5%;">
+
+            <br>
+            <p> Email </p>
+
+            <input type="text" placeholder="Email" name="email" style="margin-bottom: 10%;">
+
+            <br>
+            <input id="rgst" class="ignore focused" type="submit" value="Submit" style="margin-bottom: 10%;">
+
+            <br>
+            <p style="margin-bottom: 5%;"> If you are already registered, go login now! </p>
+
+            <button id="lgn" class="ignore" style="margin-bottom: 10%;"> Login </button>
+        </form>
+    </div>
+</div>

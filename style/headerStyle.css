@@ -1,0 +1,172 @@
+p{
+    font-family: "Times New Roman", Times, serif;
+    color: #ec625f;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+div#line{
+    width: 100%;
+    height: calc(3vh + 2vw);
+    background-color: 	#525252;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    box-shadow: -5px -10px 30px 20px #313131 inset;
+    overflow: hidden;
+}
+
+#header{
+    height: 100%;
+}
+
+.sticky{
+    z-index: 2;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#hidden{
+    display: none;
+}
+
+div#line > *{
+    text-shadow:-1px 0 #393e46, 0 1px #393e46, 1px 0 #393e46, 0 -1px #393e46;
+}
+
+div#header > table{
+    position: relative;
+    margin: 0px;
+    height: 100%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#header > table > tbody > tr > td > button{
+    height: 100%;
+}
+
+div#header > table > tr > td > *{
+    position: relative;
+    height: 70%;
+}
+
+button:not(.close),
+input[type="submit"]{
+    border:0.1em solid #ec625f;
+    border-radius:0.12em;
+    color:#ec625f;
+    background-color: transparent;
+    font-size:1.5vw;
+}
+
+button:hover,
+input[type="submit"]:hover{
+    color:#393e46;
+    background-color: #ec625f;
+}
+
+div.login_popup > div.login_page > button.close,
+div.login_popup > div.register_page > button.close{
+    border: 0.1em solid #ec625f;
+    background-color: transparent;
+    color: #ec625f;
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    position: relative;
+    left: calc(100% - 30px);
+}
+
+div.login_popup{
+    overflow: auto;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 3;
+}
+
+div.login_popup > div.login_page,
+div.login_popup > div.register_page{
+    position: relative;
+    width: 25%;
+    height: auto;
+    min-width: 200px;
+    top: 10%;
+    background: #393e46;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.1em solid #ec625f;
+}
+
+div.login_popup > div.login_page > *:not(.close)
+div.login_popup > div.register_page > *:not(.close){
+    font-size: 1.2vw;
+}
+
+input:not(#src){
+    text-align: center;
+}
+
+div.login_popup > div.login_page > form,
+div.login_popup > div.register_page > form{
+    margin-bottom: 0px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+div.login_popup > div.login_page > form > *:not(.ignore),
+div.login_popup > div.register_page > form > *:not(.ignore){
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#load_screen_animation{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #313131;
+    -webkit-animation-name: load_screen_animation; /* Safari 4.0 - 8.0 */
+    animation-name: load_screen_animation;
+    animation: load_screen_animation 2s forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes load_screen_animation {
+    from
+    {
+        z-index: 20;
+        background-color: #313131;
+    }
+    to 
+    {
+        background-color: transparent;
+        z-index: -1;
+    }
+  }
+  
+  /* Standard syntax */
+@keyframes load_screen_animation {
+    from
+    {
+        z-index: 20;
+        background-color: #313131;
+    }
+    to 
+    {
+        background-color: transparent;
+        z-index: -1;
+    }
+}

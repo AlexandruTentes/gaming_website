@@ -1,0 +1,108 @@
+div#content > table > tbody > tr > td > div{
+    width: 100%;
+    height: 100%;
+}
+
+#content{
+    height: 100vh;
+}
+
+#head > *,
+#body > *{
+    font-size: 1.3vw;
+}
+
+div#content > table > tbody > tr > td:not(#games){
+    width: 15%;
+    padding: 0px;
+    background-color: transparent;
+    box-shadow: -5px -10px 30px 20px #313131 inset;
+}
+
+div#content > table > tbody > tr > td#games{
+    padding: 0px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+div#content > table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+td#games{
+    vertical-align: top;
+}
+
+td#games > #possition{
+    position: relative;
+    top: 15vh;
+    height: 70vh;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+*
+#possition > table{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    max-height: 75%;
+}
+
+#gamesList_layout{
+    width: 25%;
+    height: 25%;
+    padding: 0px;
+    position: relative;
+    border: 1px solid black;
+}
+
+#synopsis{
+    width: 75%;
+    height: 25%;
+    vertical-align: top;
+    padding: 0px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+#head{
+    width: 100%;
+    height: 15%;
+    border-bottom: 1px solid black; 
+}
+
+#head > *{
+    display: inline;
+}
+
+#body{
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#hidden_overlay{
+    position: absolute;
+    top: 0;
+    transition: opacity .35s ease;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    background-color: gray;
+}
+
+#hidden_overlay:hover{
+    opacity: 0.6;
+}
