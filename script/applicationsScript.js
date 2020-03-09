@@ -1,11 +1,5 @@
-const image = document.getElementsByClassName("overlay_image");
-const eachPic = document.getElementsByClassName("click");
-
 window.onload = function()
 {
-    contentOnServer('get', "php/destroy_session.php", null, null, 0);
-    delete_cookie("account_data");
-
     dynamicContent.forEach(function(page)
     {
         contentOnServer('get', (page + ".html"), 

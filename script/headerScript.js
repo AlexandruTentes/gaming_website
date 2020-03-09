@@ -37,7 +37,7 @@ handler_show_login = function(event)
     }
 
     if(event.target.className == "games_list_btn")
-        window.location = "gamesList.html"
+        window.location = "applications.html"
 }
 
 handler_close_login = function(event)

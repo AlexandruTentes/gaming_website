@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 
     $userID = isset($_SESSION['user']) ? $_SESSION['user'] : NULL;
@@ -20,7 +19,11 @@
     if($input_validation != false)
     {
         require_once("connect.php");
+        
         $connection = connection();
+
+	if($connection == null)
+            die("Database connection could not be established!");
 
         $sql = "SELECT id FROM Accounts WHERE account_id = '" . $id . "' AND account_password = '" . $password . "'";
         $result = $connection->query($sql);
